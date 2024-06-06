@@ -1,1 +1,487 @@
-<h1>Hola</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./img/favicon.png">
+    <title>Portafolio - Armando Aguinaga</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCAVEZADO-->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">ArmandoDev</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!--SECCION INICIO-->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="./img/foto-perfil.png" alt="">
+            </div>
+            <h1>ARMANDO AGUINAGA</h1>
+            <h2>Ingeniero de Software</h2>
+            <div class="redes">
+                <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https:www.linkedin.com/in/armandoaguinagadev" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://wa.me/51990658798?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION SOBRE MI-->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Armando Aguinaga.</span>
+                Soy un ingeniero de sistemas con una pasión especial por el desarrollo de software, 
+                centrado en la creación de soluciones robustas y eficientes. Priorizo la calidad y la rápida respuesta a las necesidades actuales. 
+                Poseo una fuerte habilidad en el análisis y manejo de datos, y sobresalgo en el trabajo en equipo, 
+                promoviendo un entorno ágil y colaborativo. Mi objetivo es garantizar el éxito de los proyectos mediante una combinación 
+                sólida de tecnologías backend y frontend.
+            </p>
+
+            <div class="fila">
+                <!--Datos personales-->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Nombre</strong>
+                            Armando Aguinaga
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +51 990658798
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            armandodevpy@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            wwww.armandodev.com
+                        </li>
+                    </ul>
+                </div>
+                <!--Intereses-->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-music "></i>
+                            <span> Música</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-linux "></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>Viajes</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Lectura</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-regular fa-futbol"></i>
+                            <span>Fútbol</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-guitar"></i>
+                            <span> Guitarra</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Juegos</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-clapperboard"></i>
+                            <span>Películas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button>
+                <a href="./doc/cv.pdf" target="_blank" >
+                    Descargar CV <i class="fa-solid fa-cloud-arrow-down"></i>
+                <span class="overlay"></span>
+                </a>
+                
+            </button>
+            
+        </div>
+    </section>
+
+    <!--SECCION SKILLS-->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!--Technical Skill-->
+                <div class="col">
+                    <!--<h3>Skills</h3>-->
+                    <div class="skill">
+                        <span>HTML - CSS - JavaScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso html">
+                                <span><i class="fa-brands fa-js"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="barra-skill">
+                            <div class="progreso react">
+                                <span><i class="fa-brands fa-react"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Angular</span>
+                        <div class="barra-skill">
+                            <div class="progreso angular">
+                                <span><i class="fa-brands fa-angular"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>TypeScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso typescript">
+                                <span><i class='bx bxl-typescript'></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>API-REST</span>
+                        <div class="barra-skill">
+                            <div class="progreso apirest">
+                                <span><i class='bx bx-server'></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Git</span>
+                        <div class="barra-skill">
+                            <div class="progreso git">
+                                <span><i class="fa-brands fa-github"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Profesional Skill-->
+                <div class="col">
+                    <!--<h3>Profesinal Skill</h3>-->
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso sql">
+                                <span><i class="fa-solid fa-database"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java / Spring-Boot</span>
+                        <div class="barra-skill">
+                            <div class="progreso spring">
+                                <span><i class='bx bxl-spring-boot'></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C# / .net / ASP.Net</span>
+                        <div class="barra-skill">
+                            <div class="progreso dotnet">
+                                <span><i class="fa-brands fa-microsoft"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python / FastAPI / Django</span>
+                        <div class="barra-skill">
+                            <div class="progreso python">
+                                <span><i class='bx bxl-django'></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Docker</span>
+                        <div class="barra-skill">
+                            <div class="progreso docker">
+                                <span><i class='bx bxl-docker' ></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Microservicios</span>
+                        <div class="barra-skill">
+                            <div class="progreso micro">
+                                <span><i class='bx bx-cube'></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION CURRICULUM-->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-section">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Ingeniería de Sistemas Computacionales</h4>
+                        <span class="fecha">2018 - 2023</span>
+                        <span class="casa">Universidad Privada del Norte</span>
+                        <p>
+                            Durante mis estudios en 
+                            Ingeniería de Sistemas Computacionales en 
+                            la Universidad Privada del Norte, 
+                            adquirí una sólida base en programación, 
+                            bases de datos, y seguridad informática. 
+                            Participé en proyectos que me permitieron 
+                            aplicar estos conocimientos de manera 
+                            práctica, desarrollando soluciones 
+                            innovadoras y eficientes. 
+                            Esta formación me ha preparado para 
+                            enfrentar los desafíos del mundo 
+                            profesional en el desarrollo de software.
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>ASP.NET CORE WEB API | REST APIS | SQL</h4>
+                        <span class="fecha">2023</span>
+                        <span class="casa">Udemy</span>
+                        <p>
+                            A lo largo del curso he adquirido un entendimiento de cómo diseñar, implementar y desplegar API RESTful utilizando ASP.NET Core. 
+                            Aprendí a desarrollar servicios web eficientes que pueden comunicarse fácilmente con otras aplicaciones a 
+                            través de HTTP, lo que me ha permitido crear soluciones más flexibles y escalables. Además, la sección sobre SQL 
+                            me proporcionó las habilidades necesarias para interactuar con bases de datos, almacenar datos de manera segura y 
+                            eficiente, y realizar consultas complejas.
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>BACKEND CON C# Y .NET</h4>
+                        <span class="fecha">2022</span>
+                        <span class="casa">Platzi</span>
+                        <p>
+                            A lo largo de las lecciones, he aprendido mucho sobre cómo desarrollar aplicaciones de backend utilizando 
+                            las herramientas de C# y .NET. 
+                            No solo adquirí conocimientos teóricos, sino que también tuve la oportunidad de aplicar lo que aprendí en 
+                            proyectos prácticos. Aprendí a diseñar y desarrollar servicios web sólidos y eficientes, así como a interactuar 
+                            con bases de datos utilizando Entity Framework. Además, mejorar mis habilidades en la organización y estructuración 
+                            del código
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>ASP.NET CORE MVC AND C#</h4>
+                        <span class="fecha">2021</span>
+                        <span class="casa">Udemy</span>
+                        <p>
+                            He aprendido a diseñar y construir aplicaciones web dinámicas 
+                            utilizando el framework ASP.NET Core y el lenguaje de programación C#. Aprendí el patrón
+                            MVC (Modelo-Vista-Controlador) y comprendo cómo organizar eficientemente el código de mis aplicaciones para una mejor 
+                            mantenibilidad y escalabilidad. Además, he adquirido habilidades en la creación de modelos de datos, 
+                            la configuración de rutas, la implementación de vistas interactivas y la gestión de formularios.
+                        </p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de Trabajo</h3>
+                    <div class="item der">
+                        <h4>Desarrolladora de Software en C#</h4>
+                        <span class="fecha">Enero 2023 - Abril 2024</span>
+                        <span class="casa">Ransa Comercial S.A.</span>
+                        <p>
+                            Fui parte del desarrollo de módulos clave para el sistema de logística utilizando C#, lo que permitió una integración más fluida y eficiente de los procesos logísticos. Además, me enfoqué en la optimización de la plataforma de gestión de almacenes, implementando mejoras que aumentaron la visibilidad y la capacidad de seguimiento de los productos en tiempo real. Estas mejoras contribuyeron directamente a una mejora significativa del 15% en la eficiencia de la cadena de suministro, facilitando una coordinación más ágil y precisa entre todos los componentes del proceso logístico, desde la adquisición hasta la entrega final al cliente.
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Desarrollador de Software en C#</h4>
+                        <span class="fecha">Julio 2021 - Diciembre 2022</span>
+                        <span class="casa">Grupo Gloria s.a.</span>
+                        <p>
+                            Lideré la implementación de un programa de capacitación en C# que resultó en una mejora del 20% en la productividad del equipo. Además, desarrollé aplicaciones en C# destinadas a optimizar la gestión de recursos humanos, lo que facilitó procesos críticos como la administración de nóminas y la evaluación del desempeño. Gracias a estas mejoras tecnológicas y a la optimización de los procesos de selección y retención, logramos reducir la rotación de personal en un 15%, creando un entorno de trabajo más estable y eficiente.
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Programador en C#</h4>
+                        <span class="fecha">Enero 2020 - Junio 2021</span>
+                        <span class="casa">Alicorp S.A.A.</span>
+                        <p>
+                            Mi responsabilidad principal fue el desarrollo 
+                            y mantenimiento de aplicaciones internas en C# dedicadas a la gestión de operaciones logísticas. 
+                            Esto incluyó la implementación de mejoras significativas en el sistema de gestión de inventarios, utilizando tecnologías innovadoras para optimizar la precisión y eficiencia del inventario. Como resultado directo de estas mejoras, logramos reducir el tiempo de entrega de productos en un 25%, gracias a la optimización de las rutas logísticas y la sincronización más eficiente de los procesos de almacenamiento y distribución.
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION PORFOLIO-->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="./img/tasklist.png" alt="">
+                    <div class="overlay">
+                        <h3>Lista de Tareas (TaskList)</h3>
+                        <p">Tecnologías: ASP.NET Core MVC, Entity Framework (con SQLite para una base de datos simple), 
+                            HTML5, CSS3, JavaScript.</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/notemanager.png" alt="">
+                    <div class="overlay">
+                        <h3>Gestor de Notas (NoteManager)</h3>
+                        <p>ASP.NET Core MVC, Entity Framework (con SQLite), Bootstrap, JavaScript</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/productcatalog.png" alt="">
+                    <div class="overlay">
+                        <h3>Catálogo de Productos (ProductCatalog)</h3>
+                        <p>ASP.NET Core MVC, Entity Framework (con SQLite), HTML5, CSS3, Razor Pages.</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/todomanager.png" alt="">
+                    <div class="overlay">
+                        <h3>Gestor de Tareas Pendientes (ToDoManager)</h3>
+                        <p>ASP.NET Core MVC, Entity Framework (con SQLite), Bootstrap, JavaScript.</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/blog.png" alt="">
+                    <div class="overlay">
+                        <h3>Blog Personal (PersonalBlog)</h3>
+                        <p>ASP.NET Core MVC, Entity Framework (con SQLite), HTML5, CSS3, JavaScript</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/portfolio.png" alt="">
+                    <div class="overlay">
+                        <h3>Página de Portafolio Personal (PortfolioPage)</h3>
+                        <p>HTML, CSS y JavaScript</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!--SECCION CONTACTO-->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!--FORMULARIO-->
+                <form action="https://formsubmit.co/armandodevpy@gmail.com" method="POST" class="col">
+                    <input type="text" placeholder="Nombre y apellido" name="name">
+                    <input type="text" placeholder="Número de contacto" name="telefono">
+                    <input type="text" placeholder="Correo electrónico" name="correo">
+                    <input type="text" placeholder="Tema del mensaje" name="tema">
+                    <textarea id="" cols="30" rows="10" placeholder="Mensaje" name="texto"></textarea>
+                    <button type="submit">
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+                <!--MAPA-->
+                <div class="col">
+                    <img src="./img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Callao - Perú
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                Llamanos: +51 990658798
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: armandodevpy@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION FOOTER-->
+
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https:www.linkedin.com/in/armandoaguinagadev" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/51990658798?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="creado">
+            <p>&copy; armandodev 2024</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>

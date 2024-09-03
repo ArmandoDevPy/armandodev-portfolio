@@ -11,7 +11,7 @@ html{
 }
 /*MENU*/
 .contenedor-header{
-    background-color: #1e2326;
+    background-color: #FFFFFF;
     position: fixed;
     width: 100%;
     top: 0;
@@ -29,7 +29,7 @@ html{
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -42,14 +42,14 @@ html{
 }
 .contenedor-header header nav ul li a{
     text-align: none;
-    color: #fff;
+    color: #020202;
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
     text-decoration: none;
 }
 .contenedor-header header nav ul li a:hover{
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -57,7 +57,7 @@ html{
     text-decoration: none;
 }
 .nav-responsive{
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -70,16 +70,16 @@ html{
 }
 /*SECCION INICIO*/
 .inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8) , rgba(30,35,38,1)), url(./img/fondo.jpg);
+    background: linear-gradient(to top, rgba(200, 205, 208, 0.8) , rgb(191, 217, 230)), url(./img/fondo.jpg);
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: #050505;
     display: flex;
     align-items: center;
 }
 .inicio .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
+    background-color: #f1eaea;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -87,9 +87,9 @@ html{
 }
 .inicio .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #512bd4;
+    border: 5px solid #00FA9A;
     display: block;
-    width: 80%;
+    width: 100%;
     margin: auto;
     border-radius: 100%;
 }
@@ -103,10 +103,10 @@ html{
     font-weight: normal;
 }
 .inicio .contenido-banner .redes a{
-    color: #fff;
+    color: #050505;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid #131212;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -116,18 +116,18 @@ html{
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     text-decoration: none;
-    border-color: #512bd4;
+    border-color: #00FA9A;
 }
 /*SECCION SOBRE MI*/
 .sobremi{
-    background-color: #1e2326;
-    color: #fff;
+    background-color: #FFFAFA;
+    color: #0d0d0d;
     padding: 50px 20px;
 }
 .sobremi .contenido-seccion{
@@ -146,7 +146,7 @@ html{
     margin-bottom: 20px;
 }
 .sobremi .contenido-seccion p span{
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #2E8B57, #2E8B57); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -173,7 +173,7 @@ html{
 }
 .sobremi .fila .col ul li strong{
     display: inline-block;
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #2E8B57, #2E8B57); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -181,12 +181,7 @@ html{
     text-decoration: none;
     width: 130px;
 }
-/*.sobremi .fila .col ul li span{
-    background-color: #512bd4;
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
-}*/
+
 .sobremi .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap;
@@ -194,7 +189,7 @@ html{
 .sobremi .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
-    background-color: #252A2E;
+    background-color: #F0FFFF;
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -205,7 +200,7 @@ html{
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover{
-    background: linear-gradient(90deg, #d600aa, #512bd4);
+    background: linear-gradient(90deg, #00FA9A, #00FA9A);
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
@@ -234,7 +229,7 @@ html{
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #d600aa, #512bd4);
+    background: linear-gradient(90deg, #00FA9A, #00FA9A);
     z-index: -1;
     transition: 1s;
 }
@@ -243,8 +238,8 @@ html{
 }
 /*SECCION SKILLS*/
 .skills{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: #DCDCDC;
+    color: #030303;
     padding: 50px 20px;
 }
 .skills .contenido-seccion{
@@ -277,12 +272,12 @@ html{
 .skills .skill .barra-skill{
     height: 8px;
     width: 80%;
-    background-color: #512bd4;
+    background-color: #00FA9A;
     position: relative;
     margin-bottom: 30px;
 }
 .skills .skill .progreso{
-    background-color: #d600aa;
+    background-color: #2E8B57;
     position: absolute;
     top: 0;
     left: 0;
@@ -292,7 +287,7 @@ html{
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #d600aa;
+    background-color: #2E8B57;
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -397,118 +392,12 @@ html{
     0%{width: 0%;} 
     100%{width: 100%;}
 }
-/* SECCION CURRICULUMU */
-.curriculum{
-    background-color: #1e2326;
-    color: #fff;
-    padding: 50px 20px;
-}
-.curriculum .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.curriculum h2{
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
-}
-.curriculum .fila{
-    display: flex;
-    justify-content: space-between;
-}
-.curriculum .fila .col{
-    width: 49%;
-    padding: 0 20px;
-}
-.curriculum .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
-}
-.curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
-}
-.curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
-}
-.curriculum .fila .item{
-    padding: 25px;
-    margin-bottom: 30px;
-    background-color: #252A2E;
-    position: relative;
-}
-.curriculum .fila .item h4{
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.curriculum .fila .item .casa{
-    color: #d600aa;
-    font-size: 22px;
-    font-weight: bold;
-    display: block;
-}
-.curriculum .fila .item .fecha{
-    display: block;
-    color: #d600aa;
-    margin-bottom: 10px;
-}
-.curriculum .fila .item p{
-    line-height: 24px;
-}
-.curriculum .fila .izq{
-    border-right: 2px solid #512bd4;
-    margin-right: 20px;
 
-}
-.curriculum .fila .der{
-    border-left: 2px solid #512bd4;
-    margin-left: 20px;
-}
-.curriculum .fila .item .conectori{
-    height: 2px;
-    background-color: #d600aa;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    right: -47px;
-    z-index: 5;
-}
-.curriculum .fila .item .conectori .circuloi{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #512bd4;
-    float: right;
-    position: relative;
-    bottom: 4px;
-
-}
-.curriculum .fila .item .conectord{
-    height: 2px;
-    background-color: #d600aa;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    left: -47px;
-    z-index: 5;
-}
-.curriculum .fila .item .conectord .circulod{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #512bd4;
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
 
 /* SECCION PORTFOLIO */
 .portfolio {
-    background-color: #1e2326;
-    color: #fff;
+    background-color: #ffffff;
+    color: #080808;
     padding: 50px 20px;
 }
 .portfolio .contenido-seccion {
@@ -549,7 +438,7 @@ html{
     right: 0;
     bottom: 0;
     text-align: center;
-    background: linear-gradient(90deg, rgba(214, 0, 170, 0.8), rgba(81, 43, 212, 0.8));
+    background: linear-gradient(90deg, #00FA9A, #2E8B57);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -570,17 +459,17 @@ html{
     margin-bottom: 0;
 }
 
-
 /*SECCION CONTACTO*/
 .contacto{
     background-image: url(./img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color: #DCDCDC;
+    color: #080808;
     padding: 50px 0;
 }
 .contacto .contenido-seccion{
     max-width: 1100px;
     margin: auto;
+    padding: 0 20px; /* Agregado para asegurarse de que el contenido no toque los bordes en pantallas más pequeñas */
 }
 .contacto h2{
     font-size: 48px;
@@ -590,11 +479,15 @@ html{
 }
 .contacto .fila{
     display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
 }
 .contacto .col{
-    width: 50%;
+    width: 100%; /* Ajusta el ancho para que ocupe el 100% del contenedor en pantallas más pequeñas */
+    max-width: 600px; /* Ajusta el ancho máximo del formulario */
     padding: 10px;
-    position: relative;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
 }
 .contacto .col input, .contacto .col textarea{
     display: block;
@@ -602,22 +495,24 @@ html{
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
+    background-color: #ffffff;
+    color: #252323;
     font-size: 18px;
+    border-radius: 5px; /* Agregado para bordes redondeados en campos de entrada */
 }
 .contacto button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid #2E8B57;
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: #060606;
     position: relative;
     z-index: 10;
+    border-radius: 5px; /* Agregado para bordes redondeados en el botón */
 }
 .contacto button .overlay{
     position: absolute;
@@ -625,7 +520,7 @@ html{
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #d600aa, #512bd4);
+    background: linear-gradient(90deg,#00FA9A, #2E8B57);
     z-index: -1;
     transition: 1s;
 }
@@ -636,16 +531,15 @@ html{
     width: 100%;
 }
 .contacto .col .info{
-    position: absolute;
-    top: 50%;
     background-color: #252A2E;
     padding: 20px;
     max-width: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto; /* Centra el contenedor de información */
+    border-radius: 10px; /* Agregado para bordes redondeados */
 }
 .contacto .col .info ul{
     list-style: none;
+    padding: 0; /* Elimina el padding por defecto */
 }
 .contacto .col .info ul li{
     margin-bottom: 20px;
@@ -655,10 +549,11 @@ html{
     display: inline-block;
     margin-right: 20px;
 }
+
 /*FOOTER*/
 footer{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: #ffffff;
+    color: #080808;
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -668,10 +563,10 @@ footer .redes{
     margin-bottom: 20px;
 }
 footer .redes a{
-    color: #fff;
+    color: #090909;
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid #0d0d0d;
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -681,13 +576,13 @@ footer .redes a{
     transition: .3s;
 }
 footer .redes a:hover{
-    background: linear-gradient(90deg, #d600aa, #512bd4); /* De morado a un color más claro */
+    background: linear-gradient(90deg, #00FA9A, #2E8B57); /* De morado a un color más claro */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     text-decoration: none;
-    border-color: #512bd4;
+    border-color: #00FA9A;
     display: inline-block;
     text-decoration: none;
 }
@@ -695,8 +590,8 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #512bd4;
-    color: #fff;
+    background-color: #00FA9A;
+    color: #050505;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -706,7 +601,7 @@ footer .arriba{
     font-size: 18px;
 }
 footer .creado{
-    color: #fff;
+    color: #060606;
     font-size: 18px;
 }
 /*RESPONSIVE*/
@@ -722,7 +617,7 @@ footer .creado{
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: #e5eaed;
         width: 180px;
     }
     nav.responsive ul{

@@ -1,336 +1,675 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="./img/favicon.png">
-    <title>Portafolio - Armando Aguinaga</title>
-    <link rel="stylesheet" href="estilo.css">
-</head>
-<body>
-    <!-- MENU ENCAVEZADO-->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="#">ArmandoDev</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    </div>
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /*prermite deslizar en los link del menu*/
+    scroll-behavior: smooth;
+}
+/*MENU*/
+.contenedor-header{
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #020202;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+}
+.nav-responsive{
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*SECCION INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(200, 205, 208, 0.8) , rgb(191, 217, 230)), url(./img/fondo.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #050505;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #f1eaea;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 5px solid #00FA9A;
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #050505;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #131212;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background: linear-gradient(90deg, #00FA9A, #00FA9A); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    border-color: #00FA9A;
+}
+/*SECCION SOBRE MI*/
+.sobremi{
+    background-color: #FFFAFA;
+    color: #0d0d0d;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    background: linear-gradient(90deg, #2E8B57, #2E8B57); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    background: linear-gradient(90deg, #2E8B57, #2E8B57); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    width: 130px;
+}
 
-    <!--SECCION INICIO-->
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="./img/foto-perfil.jpg" alt="">
-            </div>
-            <h1>ArmandoDev</h1>
-            <h2>Ingeniero de Software</h2>
-            <div class="redes">
-                <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/armando-aguinaga-dev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://wa.me/51921475701?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #F0FFFF;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
 
-    <!--SECCION SOBRE MI-->
-    <section id="sobremi" class="sobremi">
-        <div class="contenido-seccion">
-            <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Armando Aguinaga.</span>
-                Soy un ingeniero de sistemas con una pasión especial por el desarrollo de software, 
-                centrado en la creación de soluciones robustas y eficientes. Priorizo la calidad y la rápida respuesta a las necesidades actuales. 
-                Poseo una fuerte habilidad en el análisis y manejo de datos, y sobresalgo en el trabajo en equipo, 
-                promoviendo un entorno ágil y colaborativo. Mi objetivo es garantizar el éxito de los proyectos mediante una combinación 
-                sólida de tecnologías backend y frontend.
-            </p>
+.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background: linear-gradient(90deg, #00FA9A, #00FA9A);
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button a {
+    color: #fff;
+    text-decoration: none;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #00FA9A, #00FA9A);
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+/*SECCION SKILLS*/
+.skills{
+    background-color: #DCDCDC;
+    color: #030303;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #00FA9A;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #2E8B57;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #2E8B57;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/*estas clases se agregaran dinamicamente mediante javascript*/
+.skills .skill .html{
+    width: 0%;
+    animation: 2s html forwards;
+}
+@keyframes html{
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .react{
+    width: 0%;
+    animation: 2s react forwards;
+}
+@keyframes react{
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .angular{
+    width: 0%;
+    animation: 2s angular forwards;
+}
+@keyframes angular {
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .typescript{
+    width: 0%;
+    animation: 2s typescript forwards;
+}
+@keyframes typescript {
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .apirest{
+    width: 0%;
+    animation: 2s apirest forwards;
+}
+@keyframes apirest {
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .git{
+    width: 0%;
+    animation: 2s git forwards;
+}
+@keyframes git {
+   0%{width: 0%;} 
+   100%{width: 100%;}
+}
+.skills .skill .sql{
+    width: 0%;
+    animation: 2s sql forwards;
+}
+@keyframes sql {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
+.skills .skill .spring{
+    width: 0%;
+    animation: 2s spring forwards;
+}
+@keyframes spring {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
+.skills .skill .dotnet{
+    width: 0%;
+    animation: 2s dotnet forwards;
+}
+@keyframes dotnet {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
+.skills .skill .docker{
+    width: 0%;
+    animation: 2s docker forwards;
+}
+@keyframes docker {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
+.skills .skill .micro{
+    width: 0%;
+    animation: 2s micro forwards;
+}
+@keyframes micro {
+    0%{width: 0%;} 
+    100%{width: 100%;}
+}
 
-            <div class="fila">
-                <!--Datos personales-->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Nombre</strong>
-                            Armando Aguinaga
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            +51 921475701
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            armandodevpy@gmail.com
-                        </li>
-                    </ul>
-                </div>
-                <!--Intereses-->
-                <div class="col">
-                    <h3>Intereses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-solid fa-music "></i>
-                            <span> Música</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-brands fa-linux "></i>
-                            <span>Linux</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-plane"></i>
-                            <span>Viajes</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>Lectura</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-regular fa-futbol"></i>
-                            <span>Fútbol</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-guitar"></i>
-                            <span> Guitarra</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>Juegos</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-clapperboard"></i>
-                            <span>Películas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!--SECCION SKILLS-->
-    <section class="skills" id="skills">
-        <div class="contenido-seccion">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!--Technical Skill-->
-                <div class="col">
-                    <!--<h3>Skills</h3>-->
-                    <div class="skill">
-                        <span>HTML - CSS - JavaScript</span>
-                        <div class="barra-skill">
-                            <div class="progreso html">
-                                <span><i class="fa-brands fa-js"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>React</span>
-                        <div class="barra-skill">
-                            <div class="progreso react">
-                                <span><i class="fa-brands fa-react"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Angular</span>
-                        <div class="barra-skill">
-                            <div class="progreso angular">
-                                <span><i class="fa-brands fa-angular"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>TypeScript</span>
-                        <div class="barra-skill">
-                            <div class="progreso typescript">
-                                <span><i class='bx bxl-typescript'></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>API-REST</span>
-                        <div class="barra-skill">
-                            <div class="progreso apirest">
-                                <span><i class='bx bx-server'></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Git</span>
-                        <div class="barra-skill">
-                            <div class="progreso git">
-                                <span><i class="fa-brands fa-github"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Profesional Skill-->
-                <div class="col">
-                    <!--<h3>Profesinal Skill</h3>-->
-                    <div class="skill">
-                        <span>SQL</span>
-                        <div class="barra-skill">
-                            <div class="progreso sql">
-                                <span><i class="fa-solid fa-database"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Java / Spring-Boot</span>
-                        <div class="barra-skill">
-                            <div class="progreso spring">
-                                <span><i class='bx bxl-spring-boot'></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>C# / .net / ASP.Net</span>
-                        <div class="barra-skill">
-                            <div class="progreso dotnet">
-                                <span><i class="fa-brands fa-microsoft"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Python / FastAPI / Django</span>
-                        <div class="barra-skill">
-                            <div class="progreso python">
-                                <span><i class='bx bxl-django'></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Docker</span>
-                        <div class="barra-skill">
-                            <div class="progreso docker">
-                                <span><i class='bx bxl-docker' ></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Microservicios</span>
-                        <div class="barra-skill">
-                            <div class="progreso micro">
-                                <span><i class='bx bx-cube'></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* SECCION PORTFOLIO */
+.portfolio {
+    background-color: #ffffff;
+    color: #080808;
+    padding: 50px 20px;
+}
+.portfolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto {
+    position: relative;
+    width: 300px; /* Establece un tamaño fijo para la anchura del contenedor */
+    height: 200px; /* Establece un tamaño fijo para la altura del contenedor */
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que las imágenes que sobresalgan del contenedor se recorten */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra para el contenedor */
+}
+.portfolio .galeria .proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que llene todo el contenedor */
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: linear-gradient(90deg, #00FA9A, #2E8B57);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.5s; /* Ajusta la duración de la transición */
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+    border-radius: 10px; /* Bordes redondeados para la superposición */
+}
+.portfolio .galeria .proyecto .overlay h3 {
+    margin-bottom: 20px;
+    transition: margin-bottom 0.5s; /* Ajusta la duración de la transición */
+}
+.portfolio .galeria .proyecto:hover .overlay {
+    opacity: 1;
+}
+.portfolio .galeria .proyecto:hover .overlay h3 {
+    margin-bottom: 0;
+}
 
-    <!-- SECCIÓN PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-    <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
-        <div class="galeria">
-            <div class="proyecto">
-                <img src="./img/tasklist.png" alt="Lista de Tareas">
-                <div class="overlay">
-                    <h3>Lista de Tareas (TaskList)</h3>
-                    <p>Esta aplicación permite la creación, edición, eliminación y organización de tareas.</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="./img/notemanager.png" alt="Gestor de Notas">
-                <div class="overlay">
-                    <h3>Gestor de Notas (NoteManager)</h3>
-                    <p>Esta herramienta permite a los usuarios capturar ideas, listas, recordatorios y cualquier 
-                        otra información.</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="./img/productcatalog.png" alt="Catálogo de Productos">
-                <div class="overlay">
-                    <h3>Catálogo de Productos (ProductCatalog)</h3>
-                    <p>Permite mostrar productos con información detallada, 
-                        imágenes y precios.</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="./img/todomanager.png" alt="Gestor de Tareas Pendientes">
-                <div class="overlay">
-                    <h3>Gestor de Tareas Pendientes (ToDoManager)</h3>
-                    <p>Herramienta para la gestión de tareas pendientes
-                        diseñada para organizar sus actividades.</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="./img/blog.png" alt="Blog Personal">
-                <div class="overlay">
-                    <h3>Blog Personal (PersonalBlog)</h3>
-                    <p>La aplicación proporciona un entorno intuitivo para la publicación y administración de artículos.</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="./img/portfolio.png" alt="Página de Portafolio Personal">
-                <div class="overlay">
-                    <h3>Página de Portafolio Personal (PortfolioPage)</h3>
-                    <p>Esta herramienta permite a los usuarios presentar sus experiencias laborales.</p>
-                </div>
-            </div>
-        </div> 
-    </div>
-    </section>
+/*SECCION CONTACTO*/
+.contacto{
+    background-image: url(./img/contact_bg.png);
+    background-color: #DCDCDC;
+    color: #080808;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px; /* Agregado para asegurarse de que el contenido no toque los bordes en pantallas más pequeñas */
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+}
+.contacto .col{
+    width: 100%; /* Ajusta el ancho para que ocupe el 100% del contenedor en pantallas más pequeñas */
+    max-width: 600px; /* Ajusta el ancho máximo del formulario */
+    padding: 10px;
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    color: #252323;
+    font-size: 18px;
+    border-radius: 5px; /* Agregado para bordes redondeados en campos de entrada */
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #2E8B57;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #060606;
+    position: relative;
+    z-index: 10;
+    border-radius: 5px; /* Agregado para bordes redondeados en el botón */
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg,#00FA9A, #2E8B57);
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    margin: 0 auto; /* Centra el contenedor de información */
+    border-radius: 10px; /* Agregado para bordes redondeados */
+}
+.contacto .col .info ul{
+    list-style: none;
+    padding: 0; /* Elimina el padding por defecto */
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: #512bd4;
+    display: inline-block;
+    margin-right: 20px;
+}
 
-    <!--SECCION CONTACTO-->
-    <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
-            <div class="fila">
-                <!--FORMULARIO-->
-                <form action="https://formsubmit.co/armandodevpy@gmail.com" method="POST" class="col">
-                    <input type="text" placeholder="Nombre y apellido" name="name">
-                    <input type="text" placeholder="Número de contacto" name="telefono">
-                    <input type="text" placeholder="Correo electrónico" name="correo">
-                    <input type="text" placeholder="Tema del mensaje" name="tema">
-                    <textarea id="" cols="30" rows="10" placeholder="Mensaje" name="texto"></textarea>
-                    <button type="submit">
-                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                    <input type="hidden" name="_next" value="https://armandodevpy.github.io/">
-                    <input type="hidden" name="_captcha" value="false">
-                </form>
-            </div>
-        </div>
-    </section>
+/*FOOTER*/
+footer{
+    background-color: #ffffff;
+    color: #080808;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #090909;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #0d0d0d;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redes a:hover{
+    background: linear-gradient(90deg, #00FA9A, #2E8B57); /* De morado a un color más claro */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    border-color: #00FA9A;
+    display: inline-block;
+    text-decoration: none;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #00FA9A;
+    color: #050505;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+footer .creado{
+    color: #060606;
+    font-size: 18px;
+}
+/*RESPONSIVE*/
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #e5eaed;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        /*border-bottom: 1px solid #fff;*/
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
 
-    <!--SECCION FOOTER-->
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
 
-    <footer>
-        <a href="#inicio" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="redes">
-            <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/armando-aguinaga-dev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://wa.me/51921475701?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="creado">
-            <p>&copy; armandodev 2024</p>
-        </div>
-    </footer>
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
 
-    <script src="script.js">
-        
-    </script>
-    
-</body>
-</html>
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}

@@ -9,13 +9,14 @@
     <title>Portafolio - Armando Aguinaga</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body data-theme="dark">
     <!-- MENU ENCAVEZADO-->
     <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="#">ArmandoDev</a>
             </div>
+
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
@@ -25,28 +26,63 @@
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
+
+            <button id="themeToggle" class="btn-theme">
+                <i class="fa-regular fa-sun"></i>
+            </button>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
     </div>
 
-    <!--SECCION INICIO-->
+    <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="./img/foto-perfil.jpg" alt="">
-            </div>
-            <h1>ArmandoDev</h1>
-            <h2>Ingeniero de Software</h2>
-            <div class="redes">
-                <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/armando-aguinaga-dev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://wa.me/51921475701?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
-            </div>
+    <div class="hero-container">
+        <div class="hero-text">
+        <p class="hero-badge">Software Engineer · Full Stack</p>
+        <h1>Hola, soy <span>Armando</span>.</h1>
+        <p class="hero-subtitle">
+            Construyo aplicaciones web modernas, APIs robustas y soluciones escalables
+            con foco en calidad, rendimiento y buenas prácticas.
+        </p>
+
+        <div class="hero-tags">
+            <span>C# · ASP.NET</span>
+            <span>Java · Spring Boot</span>
+            <span>Python · FastAPI - Django - Flask</span>
+            <span>React · TypeScript</span>
+            <span>Angular · TypeScript</span>
+            <span>Arquitectura de microservicios</span>
+            <span>Docker · SQL</span>
+            <span>Azure · AWS</span>
+            <span>Git . Github</span>
         </div>
+
+        <div class="hero-cta">
+            <a href="#portfolio" class="btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn-secondary">Contactar</a>
+        </div>
+
+        <div class="hero-redes">
+            <a href="https://github.com/ArmandoDevPy" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/armando-aguinaga-dev/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/51921475701?text=Hola%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        </div>
+
+        <div class="hero-photo">
+        <div class="photo-card">
+            <img src="./img/foto-perfil.jpg" alt="Foto de Armando Aguinaga">
+        </div>
+        <div class="photo-pill">
+            <span class="dot"></span> Disponible para proyectos remoto
+        </div>
+        </div>
+    </div>
     </section>
+
 
     <!--SECCION SOBRE MI-->
     <section id="sobremi" class="sobremi">
@@ -206,7 +242,7 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Python / FastAPI / Django</span>
+                        <span>Python / FastAPI / Django / FLask</span>
                         <div class="barra-skill">
                             <div class="progreso python">
                                 <span><i class='bx bxl-django'></i></span>
@@ -324,7 +360,7 @@
             <a href="mailto:armandodevpy@gmail.com?subject=Consulta&body=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <div class="creado">
-            <p>&copy; armandodev 2024</p>
+            <p>&copy; armandodev <span id="year"></span></p>
         </div>
     </footer>
 
